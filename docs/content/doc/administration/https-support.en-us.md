@@ -44,6 +44,8 @@ To learn more about the config values, please checkout the [Config Cheat Sheet](
 
 For the `CERT_FILE` or `KEY_FILE` field, the file path is relative to the `GITEA_CUSTOM` environment variable when it is a relative path. It can be an absolute path as well.
 
+For the `PROTOCOL=https` field, make sure `https` is lowercase. Writing `PROTOCOL=HTTPS` may result in a SSL_ERROR_RX_RECORD_TOO_LONG error on Firefox or ERR_SSL_PROTOCOL_ERROR on Chrome and Edge.
+
 ### Setting up HTTP redirection
 
 The Gitea server is only able to listen to one port; to redirect HTTP requests to the HTTPS port, you will need to enable the HTTP redirection service:
